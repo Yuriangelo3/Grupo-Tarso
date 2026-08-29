@@ -1108,6 +1108,260 @@ footer {
 .menu-mobile {
     display: none;
 }
+/* =========================================================
+   RESPONSIVIDADE - CELULAR
+   ========================================================= */
 
+@media (max-width: 768px) {
+
+    /* =========================
+       CONFIGURAÇÃO GERAL
+       ========================= */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+
+    /* =========================
+       CABEÇALHO
+       ========================= */
+
+    header .container {
+        min-height: 80px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 15px;
+    }
+
+    .logo-imagem {
+        width: 130px;
+        height: auto;
+    }
+
+    nav {
+        flex: 1;
+    }
+
+    nav ul {
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: flex-end;
+
+        gap: 10px;
+
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li a {
+        font-size: 11px;
+        padding: 8px 0;
+        white-space: nowrap;
+    }
+
+    .botao-header {
+        display: none;
+    }
+
+
+    /* =========================
+       BANNER
+       ========================= */
+
+    .banner {
+        width: 100%;
+        min-height: 600px;
+
+        background-size: cover;
+        background-position: center center;
+
+        overflow: hidden;
+    }
+
+    .banner-conteudo {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 70px 0 60px;
+
+        box-sizing: border-box;
+    }
+
+    .banner-conteudo h1 {
+        font-size: 34px;
+        line-height: 1.12;
+
+        max-width: 100%;
+    }
+
+    .banner-conteudo p {
+        font-size: 15px;
+        line-height: 1.5;
+
+        max-width: 100%;
+    }
+
+    .banner-botoes {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 12px;
+    }
+
+    .banner-botoes a {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       SEÇÕES
+       ========================= */
+
+    section {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    section h2 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+
+    /* =========================
+       PILARES
+       ========================= */
+
+    .pilares-grid {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        width: 100%;
+    }
+
+    .pilar {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .pilar-imagem {
+        width: 100%;
+        height: 220px;
+
+        object-fit: cover;
+    }
+
+
+    /* =========================
+       CLIENTES
+       ========================= */
+
+    .clientes-grid {
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 15px;
+
+        width: 100%;
+    }
+
+    .cliente-logo {
+        width: 100%;
+        min-width: 0;
+
+        box-sizing: border-box;
+
+        overflow: hidden;
+
+        min-height: 100px;
+
+        padding: 15px;
+    }
+
+    .cliente-logo img {
+        max-width: 90%;
+        max-height: 55px;
+
+        object-fit: contain;
+    }
+
+
+    /* =========================
+       CONTATO
+       ========================= */
+
+    .cta-botoes {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 12px;
+    }
+
+
+    /* =========================
+       RODAPÉ
+       ========================= */
+
+    .footer-conteudo {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .footer-bottom .container {
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+    }
+
+
+    /* =========================
+       FORMULÁRIO
+       ========================= */
+
+    form {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    input,
+    textarea,
+    select {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+}
 
 
