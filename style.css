@@ -1102,92 +1102,152 @@ footer {
     color: var(--laranja);
 }
 /* =========================================================
-   RESPONSIVIDADE MOBILE - GRUPO TARSO
+   MENU MOBILE
+   ========================================================= */
+
+.menu-mobile {
+    display: none;
+}
+
+
+/* =========================================================
+   CELULAR
    ========================================================= */
 
 @media (max-width: 768px) {
 
-    html,
-    body {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
-    }
-
-    /* =========================
-       CONTAINER
-       ========================= */
-
-    .container {
-        width: 100%;
-        max-width: 100%;
-        padding-left: 18px;
-        padding-right: 18px;
-        box-sizing: border-box;
-    }
-
-
-    /* =========================
-       MENU
-       ========================= */
-
     header .container {
+        min-height: 70px;
+        padding: 10px 18px;
+
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 10px;
-        flex-wrap: nowrap;
+
+        position: relative;
     }
 
-    .logo img {
-        width: 105px;
-        height: auto;
-    }
+    /* LOGO */
 
-    nav {
-        width: auto;
-    }
-
-    nav ul {
+    .logo {
         display: flex;
-        flex-direction: row;
         align-items: center;
-        justify-content: flex-end;
-        gap: 12px;
-        margin: 0;
-        padding: 0;
     }
 
-    nav ul li {
-        width: auto;
-        margin: 0;
-    }
-
-    nav ul li a {
+    .logo-imagem {
+        width: 120px;
+        height: auto;
         display: block;
-        padding: 8px 0;
-        font-size: 11px;
-        white-space: nowrap;
     }
 
-    nav ul li a::after {
+
+    /* BOTÃO HAMBÚRGUER */
+
+    .menu-mobile {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 45px;
+        height: 45px;
+
+        padding: 0;
+
+        border: none;
+        background: transparent;
+
+        font-size: 30px;
+
+        cursor: pointer;
+
+        z-index: 1001;
+    }
+
+
+    /* ESCONDE MENU NORMAL */
+
+    header nav {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        background: white;
+
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+        z-index: 1000;
+    }
+
+
+    /* MENU ABERTO */
+
+    header nav.menu-aberto {
+        display: block;
+    }
+
+    header nav ul {
+        display: flex;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    header nav ul li {
+        width: 100%;
+
+        margin: 0;
+    }
+
+    header nav ul li a {
+        display: block;
+
+        width: 100%;
+
+        padding: 15px 20px;
+
+        box-sizing: border-box;
+
+        text-align: center;
+
+        font-size: 14px;
+    }
+
+
+    /* REMOVE LINHA DECORATIVA */
+
+    header nav ul li a::after {
         display: none;
     }
+
+
+    /* BOTÃO FALE CONOSCO */
 
     .botao-header {
         display: none;
     }
 
 
-    /* =========================
+    /* =====================================================
        BANNER
-       ========================= */
+       ===================================================== */
 
     .banner {
-        min-height: 560px;
+        min-height: 600px;
+
         height: auto;
 
         background-size: cover;
+
         background-position: center center;
     }
 
@@ -1195,157 +1255,75 @@ footer {
         width: 100%;
         max-width: 100%;
 
-        padding: 70px 18px 60px;
+        padding: 80px 20px 60px;
 
         box-sizing: border-box;
 
-        text-align: left;
+        position: relative;
+
+        left: auto;
+        top: auto;
+
+        transform: none;
     }
 
     .banner-conteudo h1 {
         font-size: 34px;
-        line-height: 1.12;
+
+        line-height: 1.1;
 
         max-width: 100%;
-
-        margin-bottom: 18px;
     }
 
     .banner-conteudo p {
         font-size: 15px;
-        line-height: 1.55;
+
+        line-height: 1.5;
 
         max-width: 100%;
-
-        margin-bottom: 25px;
     }
 
     .banner-botoes {
         display: flex;
+
         flex-direction: column;
 
-        width: 100%;
-
-        gap: 10px;
-    }
-
-    .banner-botoes a {
-        width: 100%;
-        box-sizing: border-box;
-
-        text-align: center;
-    }
-
-
-    /* =========================
-       PILARES
-       ========================= */
-
-    .pilares-grid {
-        grid-template-columns: 1fr;
-
-        width: 100%;
-
-        gap: 22px;
-    }
-
-    .pilar {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .pilar-imagem {
-        width: 100%;
-        height: 210px;
-
-        object-fit: cover;
-    }
-
-
-    /* =========================
-       CLIENTES
-       ========================= */
-
-    .clientes-grid {
-        display: grid;
-
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-
-        width: 100%;
+        align-items: flex-start;
 
         gap: 12px;
     }
 
+    .banner-botoes a {
+        width: auto;
+
+        min-width: 190px;
+
+        text-align: center;
+    }
+
+
+    /* =====================================================
+       CLIENTES
+       ===================================================== */
+
+    .clientes-grid {
+        width: 100%;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+
+        box-sizing: border-box;
+    }
+
     .cliente-logo {
         width: 100%;
+
         min-width: 0;
 
-        min-height: 95px;
-
-        padding: 12px;
-
         box-sizing: border-box;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
 
         overflow: hidden;
-    }
-
-    .cliente-logo img {
-        max-width: 90%;
-        max-height: 55px;
-
-        width: auto;
-        height: auto;
-
-        object-fit: contain;
-    }
-
-
-    /* =========================
-       CTA
-       ========================= */
-
-    .cta-botoes {
-        display: flex;
-        flex-direction: column;
-
-        width: 100%;
-
-        gap: 10px;
-    }
-
-    .cta-botoes a {
-        width: 100%;
-        box-sizing: border-box;
-
-        text-align: center;
-    }
-
-
-    /* =========================
-       RODAPÉ
-       ========================= */
-
-    .footer-conteudo {
-        grid-template-columns: 1fr;
-
-        gap: 30px;
-
-        width: 100%;
-    }
-
-    .footer-bottom .container {
-        display: flex;
-        flex-direction: column;
-
-        align-items: center;
-
-        text-align: center;
-
-        gap: 8px;
     }
 
 }
