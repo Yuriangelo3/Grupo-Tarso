@@ -1156,17 +1156,16 @@ footer {
     }
 
     nav ul {
-        display: flex;
+       display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
-        flex-direction: row;
+    gap: 7px;
 
-        align-items: center;
-        justify-content: flex-end;
-
-        gap: 10px;
-
-        padding: 0;
-        margin: 0;
+    padding: 0;
+    margin: 0;
+}
     }
 
     nav ul li {
@@ -1175,8 +1174,8 @@ footer {
     }
 
     nav ul li a {
-        font-size: 11px;
-        padding: 8px 0;
+        font-size: 9px;
+        padding: 6px 0;
         white-space: nowrap;
     }
 
@@ -1199,41 +1198,17 @@ footer {
         overflow: hidden;
     }
 
-    .banner-conteudo {
-        width: 100%;
-        max-width: 100%;
+  .banner {
+    width: 100%;
 
-        padding: 70px 0 60px;
+    min-height: 620px;
+    height: auto;
 
-        box-sizing: border-box;
-    }
+    background-size: cover;
+    background-position: center center;
 
-    .banner-conteudo h1 {
-        font-size: 34px;
-        line-height: 1.12;
-
-        max-width: 100%;
-    }
-
-    .banner-conteudo p {
-        font-size: 15px;
-        line-height: 1.5;
-
-        max-width: 100%;
-    }
-
-    .banner-botoes {
-        display: flex;
-
-        flex-wrap: wrap;
-
-        gap: 12px;
-    }
-
-    .banner-botoes a {
-        max-width: 100%;
-        box-sizing: border-box;
-    }
+    overflow: hidden;
+}
 
 
     /* =========================
