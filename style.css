@@ -1112,10 +1112,14 @@ footer {
    RESPONSIVIDADE - CELULAR
    ========================================================= */
 
+/* =========================================================
+   RESPONSIVIDADE MOBILE
+   ========================================================= */
+
 @media (max-width: 768px) {
 
     /* =========================
-       CONFIGURAÇÃO GERAL
+       GERAL
        ========================= */
 
     html,
@@ -1126,9 +1130,11 @@ footer {
     }
 
     .container {
-        width: 90%;
+        width: 100%;
         max-width: 100%;
-        margin: 0 auto;
+        padding-left: 18px;
+        padding-right: 18px;
+        box-sizing: border-box;
     }
 
 
@@ -1137,35 +1143,40 @@ footer {
        ========================= */
 
     header .container {
-        min-height: 80px;
+        min-height: 70px;
 
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        gap: 15px;
+        gap: 8px;
     }
 
-    .logo-imagem {
-        width: 130px;
-        height: auto;
+    .logo {
+        flex-shrink: 0;
+    }
+
+    .logo img {
+        width: 105px;
+        max-height: 36px;
     }
 
     nav {
         flex: 1;
+        min-width: 0;
     }
 
     nav ul {
-       display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+        display: flex;
+        flex-direction: row;
 
-    gap: 7px;
+        align-items: center;
+        justify-content: flex-end;
 
-    padding: 0;
-    margin: 0;
-}
+        gap: 6px;
+
+        margin: 0;
+        padding: 0;
     }
 
     nav ul li {
@@ -1174,9 +1185,15 @@ footer {
     }
 
     nav ul li a {
+        padding: 8px 2px;
+
         font-size: 9px;
-        padding: 6px 0;
+
         white-space: nowrap;
+    }
+
+    nav ul li a::after {
+        display: none;
     }
 
     .botao-header {
@@ -1190,7 +1207,7 @@ footer {
 
     .banner {
         width: 100%;
-        min-height: 600px;
+        min-height: 620px;
 
         background-size: cover;
         background-position: center center;
@@ -1198,37 +1215,105 @@ footer {
         overflow: hidden;
     }
 
-  .banner {
-    width: 100%;
+    .banner-conteudo {
+        position: relative;
 
-    min-height: 620px;
-    height: auto;
+        left: auto;
+        top: auto;
 
-    background-size: cover;
-    background-position: center center;
+        transform: none;
 
-    overflow: hidden;
-}
-
-
-    /* =========================
-       SEÇÕES
-       ========================= */
-
-    section {
         width: 100%;
+        max-width: 100%;
+
+        min-height: 620px;
+
+        padding: 70px 18px 50px;
+
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        overflow: visible;
+    }
+
+    .banner-marca {
+        font-size: 11px;
+
+        margin-bottom: 14px;
+    }
+
+    .banner-conteudo h1 {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: 32px;
+        line-height: 1.12;
+
+        margin: 0 0 18px;
+    }
+
+    .banner-conteudo p {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: 15px;
+        line-height: 1.5;
+
+        margin-bottom: 24px;
+    }
+
+    .banner-botoes {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+    .banner-botoes a {
+        width: auto;
+        max-width: 100%;
+
         box-sizing: border-box;
     }
 
-    section h2 {
-        font-size: 28px;
-        line-height: 1.2;
+
+    /* =========================
+       APRESENTAÇÃO
+       ========================= */
+
+    .apresentacao {
+        padding: 60px 0;
+    }
+
+    .apresentacao-conteudo {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .apresentacao-conteudo h2 {
+        font-size: 26px;
+    }
+
+    .apresentacao-conteudo p {
+        font-size: 15px;
+        line-height: 1.7;
     }
 
 
     /* =========================
        PILARES
        ========================= */
+
+    .pilares {
+        padding: 70px 0;
+    }
 
     .pilares-grid {
         display: grid;
@@ -1240,9 +1325,10 @@ footer {
         width: 100%;
     }
 
-    .pilar {
+    .pilar-card {
         width: 100%;
         min-width: 0;
+
         box-sizing: border-box;
     }
 
@@ -1250,7 +1336,18 @@ footer {
         width: 100%;
         height: 220px;
 
+        overflow: hidden;
+    }
+
+    .pilar-imagem img {
+        width: 100%;
+        height: 100%;
+
         object-fit: cover;
+    }
+
+    .pilar-conteudo {
+        padding: 22px;
     }
 
 
@@ -1258,45 +1355,73 @@ footer {
        CLIENTES
        ========================= */
 
+    .clientes {
+        padding: 70px 0;
+    }
+
     .clientes-grid {
         display: grid;
 
         grid-template-columns: repeat(2, minmax(0, 1fr));
 
-        gap: 15px;
+        gap: 12px;
 
         width: 100%;
+
+        box-sizing: border-box;
     }
 
     .cliente-logo {
         width: 100%;
         min-width: 0;
 
+        min-height: 100px;
+
+        padding: 12px;
+
         box-sizing: border-box;
 
         overflow: hidden;
-
-        min-height: 100px;
-
-        padding: 15px;
     }
 
     .cliente-logo img {
-        max-width: 90%;
-        max-height: 55px;
+        display: block;
+
+        width: auto;
+        max-width: 100%;
+        max-height: 50px;
 
         object-fit: contain;
     }
 
 
     /* =========================
-       CONTATO
+       CTA
        ========================= */
+
+    .cta {
+        padding: 70px 0;
+    }
+
+    .cta-conteudo {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cta-conteudo h2 {
+        font-size: 32px;
+    }
+
+    .cta-conteudo p {
+        font-size: 15px;
+    }
 
     .cta-botoes {
         display: flex;
 
-        flex-wrap: wrap;
+        flex-direction: column;
+
+        align-items: flex-start;
 
         gap: 12px;
     }
@@ -1309,34 +1434,18 @@ footer {
     .footer-conteudo {
         grid-template-columns: 1fr;
 
-        gap: 30px;
+        gap: 35px;
     }
 
     .footer-bottom .container {
+        display: flex;
+
         flex-direction: column;
 
-        gap: 10px;
+        align-items: center;
 
         text-align: center;
+
+        gap: 10px;
     }
-
-
-    /* =========================
-       FORMULÁRIO
-       ========================= */
-
-    form {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    input,
-    textarea,
-    select {
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-
 }
-
-
