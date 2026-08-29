@@ -1107,128 +1107,307 @@ footer {
 
 @media (max-width: 768px) {
 
-    /* Configuração geral */
+    /* =========================
+       CONFIGURAÇÃO GERAL
+       ========================= */
+
+    html,
     body {
+        width: 100%;
         overflow-x: hidden;
     }
 
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
     /* =========================
-       MENU
+       CABEÇALHO
        ========================= */
+
+    header .container {
+        min-height: 70px;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .logo img {
+        width: 120px;
+        max-height: 38px;
+    }
+
+    .menu-principal {
+        width: 100%;
+        margin-left: 0;
+    }
 
     nav ul {
+        display: flex;
         flex-direction: column;
-        gap: 15px;
-        padding: 20px 0;
+        align-items: stretch;
+        gap: 0;
+        padding: 5px 0 15px;
     }
 
-    nav a {
-        font-size: 16px;
-    }
-
-    /* =========================
-       CONTAINER
-       ========================= */
-
-    .container {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    /* =========================
-       BANNER / HERO
-       ========================= */
-
-    .hero {
-        min-height: 500px;
-        padding: 40px 20px;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-        line-height: 1.2;
-    }
-
-    .hero p {
-        font-size: 16px;
-        line-height: 1.5;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
+    nav ul li {
         width: 100%;
+    }
+
+    nav ul li a {
+        padding: 12px 5px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    nav ul li a::after {
+        display: none;
+    }
+
+    .botao-header {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+
+    /* =========================
+       BANNER
+       ========================= */
+
+    .banner {
+        min-height: 620px;
+
+        background-position: center center;
+    }
+
+    .banner-conteudo {
+        position: relative;
+
+        left: auto;
+        top: auto;
+
+        transform: none;
+
+        width: 100%;
+        max-width: 100%;
+
+        padding: 60px 20px;
+
+        align-items: flex-start;
+        justify-content: center;
+
+        text-align: left;
+    }
+
+    .banner-marca {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+        margin-bottom: 14px;
+    }
+
+    .banner-conteudo h1 {
+        max-width: 100%;
+
+        font-size: clamp(32px, 9vw, 46px);
+
+        line-height: 1.08;
+
+        margin-bottom: 18px;
+    }
+
+    .banner-conteudo p {
+        max-width: 100%;
+
+        font-size: 16px;
+
+        line-height: 1.5;
+
+        margin-bottom: 25px;
+    }
+
+    .banner-botoes {
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
         gap: 12px;
     }
 
-    .hero-buttons a {
+    .banner-botoes a {
         width: 100%;
+
+        min-height: 48px;
+
         text-align: center;
     }
 
-    /* =========================
-       SEÇÕES
-       ========================= */
-
-    section {
-        padding: 50px 20px;
-    }
-
-    section h2 {
-        font-size: 28px;
-    }
 
     /* =========================
-       CARDS
+       TÍTULOS
        ========================= */
 
-    .cards {
-        grid-template-columns: 1fr;
-        gap: 20px;
+    .titulo-central {
+        margin-bottom: 35px;
     }
 
-    .card {
-        width: 100%;
+    .titulo-central h2 {
+        font-size: 30px;
     }
+
+    .titulo-central p {
+        font-size: 15px;
+    }
+
 
     /* =========================
-       IMAGENS
+       APRESENTAÇÃO
        ========================= */
 
-    img {
+    .apresentacao {
+        padding: 60px 0;
+    }
+
+    .apresentacao-conteudo {
         max-width: 100%;
-        height: auto;
+        text-align: left;
     }
 
+    .apresentacao-conteudo h2 {
+        font-size: 25px;
+    }
+
+    .apresentacao-conteudo p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+
     /* =========================
-       GRIDS
+       PILARES
        ========================= */
 
-    .grid {
+    .pilares {
+        padding: 60px 0;
+    }
+
+    .pilares-grid {
         grid-template-columns: 1fr;
+
+        gap: 25px;
     }
 
+    .pilar-imagem {
+        height: 220px;
+    }
+
+    .pilar-conteudo {
+        padding: 22px;
+    }
+
+    .pilar-conteudo h3 {
+        font-size: 22px;
+    }
+
+
     /* =========================
-       DUAS COLUNAS
+       CLIENTES
        ========================= */
 
-    .two-columns {
+    .clientes {
+        padding: 60px 0;
+    }
+
+    .clientes-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+    .cliente-logo {
+        min-height: 100px;
+
+        padding: 15px;
+    }
+
+    .cliente-logo img {
+        max-width: 110px;
+        max-height: 45px;
+    }
+
+
+    /* =========================
+       CTA / CONTATO
+       ========================= */
+
+    .cta {
+        padding: 60px 0;
+    }
+
+    .cta-conteudo {
+        max-width: 100%;
+    }
+
+    .cta-conteudo h2 {
+        font-size: 32px;
+    }
+
+    .cta-conteudo p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .cta-botoes {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 12px;
+    }
+
+    .cta-botoes a {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    /* =========================
+       RODAPÉ
+       ========================= */
+
+    .footer-conteudo {
         grid-template-columns: 1fr;
-        gap: 30px;
+
+        gap: 35px;
+
+        padding-top: 50px;
+        padding-bottom: 45px;
     }
 
-    /* =========================
-       FORMULÁRIO
-       ========================= */
-
-    form {
-        width: 100%;
+    .footer-marca p {
+        max-width: 100%;
     }
 
-    input,
-    textarea,
-    select {
-        width: 100%;
-        box-sizing: border-box;
+    .footer-bottom .container {
+        min-height: auto;
+
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        text-align: center;
+
+        gap: 10px;
     }
 
 }
