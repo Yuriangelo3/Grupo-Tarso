@@ -15,7 +15,7 @@
   --laranja: #F59E0B;
   --laranja-escuro: #D97706;
 
-  --branco: #FFFFFF;
+  --branco: #FFFFFF; 
   --cinza-claro: #F5F7FA;
   --cinza: #E5E7EB;
   --cinza-texto: #667085;
@@ -144,7 +144,7 @@ header {
 .logo img {
   display: block;
 
-  width: 145px;
+  width: 150px;
 
   max-height: 40px;
 
